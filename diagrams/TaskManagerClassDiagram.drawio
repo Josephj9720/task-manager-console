@@ -1,0 +1,81 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="27.1.1">
+  <diagram name="Page-1" id="U7r_tAUXd-imAy8eIPfy">
+    <mxGraphModel dx="1678" dy="928" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tADyxzfGBAUtUcKHemu5-45" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="175" y="150" width="500" height="800" as="geometry" />
+        </mxCell>
+        <mxCell id="tADyxzfGBAUtUcKHemu5-9" value="Task" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="tADyxzfGBAUtUcKHemu5-45">
+          <mxGeometry x="335" y="620" width="160" height="128" as="geometry" />
+        </mxCell>
+        <mxCell id="tADyxzfGBAUtUcKHemu5-10" value="&lt;div&gt;&lt;div&gt;- id: int&lt;/div&gt;&lt;div&gt;- title: String&lt;/div&gt;&lt;div&gt;- description: String&lt;/div&gt;&lt;div&gt;- dueDate: LocalDate&lt;/div&gt;&lt;div&gt;- completed: boolean&lt;/div&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="tADyxzfGBAUtUcKHemu5-9">
+          <mxGeometry y="26" width="160" height="94" as="geometry" />
+        </mxCell>
+        <mxCell id="tADyxzfGBAUtUcKHemu5-11" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="tADyxzfGBAUtUcKHemu5-9">
+          <mxGeometry y="120" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="tADyxzfGBAUtUcKHemu5-44" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.494;entryY=0.75;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="tADyxzfGBAUtUcKHemu5-45">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="414.03999999999996" y="748" as="targetPoint" />
+            <mxPoint x="80.00000000000006" y="748" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="80" y="800" />
+              <mxPoint x="414" y="800" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tADyxzfGBAUtUcKHemu5-17" value="TaskDAO" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="tADyxzfGBAUtUcKHemu5-45">
+          <mxGeometry y="620" width="160" height="126" as="geometry" />
+        </mxCell>
+        <mxCell id="tADyxzfGBAUtUcKHemu5-19" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="tADyxzfGBAUtUcKHemu5-17">
+          <mxGeometry y="26" width="160" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="tADyxzfGBAUtUcKHemu5-20" value="&lt;div&gt;+ save(Task): void&lt;/div&gt;&lt;div&gt;+ findAll(): List&amp;lt;Task&amp;gt;&lt;/div&gt;&lt;div&gt;+ findById(id: int): Task&lt;/div&gt;&lt;div&gt;+ update(Task): void&lt;/div&gt;&lt;div&gt;+ delete(id: int): void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="tADyxzfGBAUtUcKHemu5-17">
+          <mxGeometry y="34" width="160" height="92" as="geometry" />
+        </mxCell>
+        <mxCell id="tADyxzfGBAUtUcKHemu5-25" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;TaskService&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ addTask(): void&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ listTasks(): List&amp;lt;Task&amp;gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ markCompleted(id: int): void&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ deleteTask(id: int): void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="tADyxzfGBAUtUcKHemu5-45">
+          <mxGeometry x="160" y="140" width="190" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="tADyxzfGBAUtUcKHemu5-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;endArrow=block;endFill=0;dashed=1;dashPattern=8 8;" edge="1" parent="tADyxzfGBAUtUcKHemu5-45" source="tADyxzfGBAUtUcKHemu5-26" target="tADyxzfGBAUtUcKHemu5-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tADyxzfGBAUtUcKHemu5-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="tADyxzfGBAUtUcKHemu5-45" source="tADyxzfGBAUtUcKHemu5-26" target="tADyxzfGBAUtUcKHemu5-9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="315" y="565" />
+              <mxPoint x="415" y="565" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tADyxzfGBAUtUcKHemu5-43" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="tADyxzfGBAUtUcKHemu5-45" source="tADyxzfGBAUtUcKHemu5-26" target="tADyxzfGBAUtUcKHemu5-17">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="195" y="565" />
+              <mxPoint x="80" y="565" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tADyxzfGBAUtUcKHemu5-26" value="TaskServiceImpl" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="tADyxzfGBAUtUcKHemu5-45">
+          <mxGeometry x="135" y="380" width="240" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="tADyxzfGBAUtUcKHemu5-28" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="tADyxzfGBAUtUcKHemu5-26">
+          <mxGeometry y="26" width="240" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="tADyxzfGBAUtUcKHemu5-29" value="&lt;div&gt;+ addTask(): void&lt;/div&gt;&lt;div&gt;+ listTasks(): List&amp;lt;Task&amp;gt;&lt;/div&gt;&lt;div&gt;+ markCompleted(id: int): void&lt;/div&gt;&lt;div&gt;+ deleteTask(id: int): void&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="tADyxzfGBAUtUcKHemu5-26">
+          <mxGeometry y="34" width="240" height="96" as="geometry" />
+        </mxCell>
+        <mxCell id="tADyxzfGBAUtUcKHemu5-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="tADyxzfGBAUtUcKHemu5-45" source="tADyxzfGBAUtUcKHemu5-30" target="tADyxzfGBAUtUcKHemu5-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="tADyxzfGBAUtUcKHemu5-30" value="Main" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="tADyxzfGBAUtUcKHemu5-45">
+          <mxGeometry x="175" width="160" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="tADyxzfGBAUtUcKHemu5-33" value="+ main(String[] args): void" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="tADyxzfGBAUtUcKHemu5-30">
+          <mxGeometry y="26" width="160" height="26" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
