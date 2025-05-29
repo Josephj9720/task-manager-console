@@ -24,7 +24,7 @@ A simple task manager built using core Java, Hibernate, and PostgreSQL. This pro
 
 ## 📐 UML Diagram
 
-![UML Diagram](diagrams/class-diagram.png)
+![UML Diagram](diagrams/TaskManagerClassDiagram.png)
 
 
 ## ✍️ Author
