@@ -1,6 +1,6 @@
 package dev.jordanjoseph.taskmanager;
 
-import dev.jordanjoseph.taskmanager.service.TaskService;
+import dev.jordanjoseph.taskmanager.service.TaskServiceImpl;
 
 import java.time.LocalDate;
 import java.util.Scanner;
@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        TaskService taskService = new TaskService();
+        TaskServiceImpl taskServiceImpl = new TaskServiceImpl();
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("=== Create a Task ===");
@@ -23,7 +23,7 @@ public class Main {
         System.out.print("Due date (YYYY-MM-DD): ");
         LocalDate dueDate  = LocalDate.parse(scanner.nextLine());
 
-        taskService.createTask(title, description, dueDate);
+        taskServiceImpl.createTask(title, description, dueDate);
 
     }
 }

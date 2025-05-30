@@ -14,7 +14,7 @@ public class TaskDAO {
         this.sessionFactory = HibernateUtil.getSessionFactory();
     }
 
-    public void createTask(Task task) {
+    public void save(Task task) {
         Transaction tx = null;
         try(Session session = sessionFactory.openSession()) {
             tx = session.beginTransaction();
