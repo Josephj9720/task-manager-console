@@ -23,7 +23,7 @@ public class TaskServiceImpl implements TaskService {
 
     @Override
     public List<Task> listTasks() {
-        return List.of();
+        return taskDAO.findAll();
     }
 
     @Override
