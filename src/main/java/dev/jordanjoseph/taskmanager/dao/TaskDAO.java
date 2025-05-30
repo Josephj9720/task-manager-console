@@ -41,4 +41,39 @@ public class TaskDAO {
         }
         return Collections.emptyList();
     }
+
+    public Task findById(Long id) {
+        Task task = null;
+        try(Session session = sessionFactory.openSession()) {
+            task = session.byId(dev.jordanjoseph.taskmanager.model.Task.class).getReference(id);
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return task;
+    }
+
+    public void update(Task task) {
+        Transaction tx = null;
+        try(Session session = sessionFactory.openSession()) {
+            tx = session.beginTransaction();
+            session.merge(task);
+            tx.commit();
+        } catch (Exception e) {
+            if(tx != null) tx.rollback();
+            e.printStackTrace();
+        }
+    }
+
+    public void delete(Task task) {
+        Transaction tx = null;
+        try(Session session = sessionFactory.openSession()) {
+            tx = session.beginTransaction();
+            session.remove(task);
+            tx.commit();
+        } catch (Exception e) {
+            if(tx != null) tx.rollback();
+            e.printStackTrace();
+        }
+    }
 }
