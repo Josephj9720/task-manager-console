@@ -1,5 +1,6 @@
 package dev.jordanjoseph.taskmanager;
 
+import dev.jordanjoseph.taskmanager.model.Task;
 import dev.jordanjoseph.taskmanager.service.TaskServiceImpl;
 
 import java.time.LocalDate;
@@ -13,6 +14,12 @@ public class Main {
         TaskServiceImpl taskServiceImpl = new TaskServiceImpl();
         Scanner scanner = new Scanner(System.in);
 
+        System.out.println("=== List All Tasks ===");
+        for(Task task : taskServiceImpl.listTasks()) {
+            System.out.println(task);
+        }
+        System.out.println("=====================");
+
         System.out.println("=== Create a Task ===");
         System.out.print("Title: ");
         String title = scanner.nextLine();
@@ -24,6 +31,10 @@ public class Main {
         LocalDate dueDate  = LocalDate.parse(scanner.nextLine());
 
         taskServiceImpl.createTask(title, description, dueDate);
+
+        System.out.println("=====================");
+
+
 
     }
 }
