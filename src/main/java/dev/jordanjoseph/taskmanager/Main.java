@@ -34,6 +34,29 @@ public class Main {
 
         System.out.println("=====================");
 
+        System.out.println("=== Update a Task ===");
+        System.out.print("Id: ");
+        Long updateId = scanner.nextLong();
+        taskServiceImpl.markCompleted(updateId);
+
+        System.out.println("=== List All Tasks After Changes ===");
+        for(Task task : taskServiceImpl.listTasks()) {
+            System.out.println(task);
+        }
+        System.out.println("=====================");
+
+        System.out.println("=== Delete a Task ===");
+        System.out.print("Id: ");
+        Long deleteId = scanner.nextLong();
+        taskServiceImpl.deleteTask(deleteId);
+
+        System.out.println("=== List All Tasks After Changes ===");
+        for(Task task : taskServiceImpl.listTasks()) {
+            System.out.println(task);
+        }
+        System.out.println("=====================");
+
+
 
 
     }

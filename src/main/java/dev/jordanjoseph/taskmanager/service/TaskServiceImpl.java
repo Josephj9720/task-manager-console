@@ -27,12 +27,27 @@ public class TaskServiceImpl implements TaskService {
     }
 
     @Override
-    public void markCompleted(int id) {
+    public void markCompleted(Long id) {
+        Task task = taskDAO.findById(id);
+        if(task != null) {
+            task.setCompleted(true);
+            taskDAO.update(task);
+            System.out.println("Task updated successfully.");
+        } else {
+            System.out.println("The task was not found. Cancelling operation.");
+        }
 
     }
 
     @Override
-    public void deleteTask(int id) {
+    public void deleteTask(Long id) {
+        Task task = taskDAO.findById(id);
+        if(task != null) {
+            taskDAO.delete(task);
+            System.out.println("Task deleted successfully.");
+        } else {
+            System.out.println("The task was not found. Cancelling operation.");
+        }
 
     }
 }
