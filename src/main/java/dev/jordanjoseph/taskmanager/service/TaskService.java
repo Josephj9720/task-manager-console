@@ -8,6 +8,6 @@ import java.util.List;
 public interface TaskService {
     void createTask(String title, String description, LocalDate dueDate);
     List<Task> listTasks();
-    void markCompleted(int id);
-    void deleteTask(int id);
+    void markCompleted(Long id);
+    void deleteTask(Long id);
 }

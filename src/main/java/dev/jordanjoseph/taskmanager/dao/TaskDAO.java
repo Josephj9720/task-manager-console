@@ -45,7 +45,7 @@ public class TaskDAO {
     public Task findById(Long id) {
         Task task = null;
         try(Session session = sessionFactory.openSession()) {
-            task = session.byId(dev.jordanjoseph.taskmanager.model.Task.class).getReference(id);
+            task = session.find(dev.jordanjoseph.taskmanager.model.Task.class, id);
 
         } catch (Exception e) {
             e.printStackTrace();
