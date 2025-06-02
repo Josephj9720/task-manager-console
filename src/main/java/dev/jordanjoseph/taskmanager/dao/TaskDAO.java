@@ -2,6 +2,7 @@ package dev.jordanjoseph.taskmanager.dao;
 
 import dev.jordanjoseph.taskmanager.model.Task;
 import dev.jordanjoseph.taskmanager.util.HibernateUtil;
+import dev.jordanjoseph.taskmanager.util.LoggerUtil;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -26,7 +27,7 @@ public class TaskDAO {
             tx.commit();
         } catch (Exception e) {
             if(tx != null) tx.rollback(); //reverts changes
-            e.printStackTrace();
+            LoggerUtil.logger.error("Failed to save task", e);
         }
     }
 
@@ -37,7 +38,7 @@ public class TaskDAO {
             tasks = query.getResultList();
             return tasks;
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerUtil.logger.error("Failed to find all tasks", e);
         }
         return Collections.emptyList();
     }
@@ -48,7 +49,7 @@ public class TaskDAO {
             task = session.find(dev.jordanjoseph.taskmanager.model.Task.class, id);
 
         } catch (Exception e) {
-            e.printStackTrace();
+            LoggerUtil.logger.error("Failed to find task by id", e);
         }
         return task;
     }
@@ -61,7 +62,7 @@ public class TaskDAO {
             tx.commit();
         } catch (Exception e) {
             if(tx != null) tx.rollback();
-            e.printStackTrace();
+            LoggerUtil.logger.error("Failed to update task", e);
         }
     }
 
@@ -73,7 +74,7 @@ public class TaskDAO {
             tx.commit();
         } catch (Exception e) {
             if(tx != null) tx.rollback();
-            e.printStackTrace();
+            LoggerUtil.logger.error("Failed to delete task", e);
         }
     }
 }

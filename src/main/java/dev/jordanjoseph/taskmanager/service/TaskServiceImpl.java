@@ -2,6 +2,7 @@ package dev.jordanjoseph.taskmanager.service;
 
 import dev.jordanjoseph.taskmanager.dao.TaskDAO;
 import dev.jordanjoseph.taskmanager.model.Task;
+import dev.jordanjoseph.taskmanager.util.LoggerUtil;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -35,6 +36,7 @@ public class TaskServiceImpl implements TaskService {
             System.out.println("Task updated successfully.");
         } else {
             System.out.println("The task was not found. Cancelling operation.");
+            LoggerUtil.logger.info("Task was not found. Operation: markCompleted");
         }
 
     }
@@ -47,6 +49,7 @@ public class TaskServiceImpl implements TaskService {
             System.out.println("Task deleted successfully.");
         } else {
             System.out.println("The task was not found. Cancelling operation.");
+            LoggerUtil.logger.info("Task was not found. Operation: deleteTask");
         }
 
     }

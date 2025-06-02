@@ -39,3 +39,6 @@ build/
 
 ### Local Configuration ###
 src/main/resources/db.properties
+
+### Logs ###
+logs/

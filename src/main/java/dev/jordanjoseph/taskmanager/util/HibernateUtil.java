@@ -32,7 +32,7 @@ public class HibernateUtil {
                 sessionFactory = configuration.buildSessionFactory();
 
             } catch (IOException e) {
-                e.printStackTrace();
+                LoggerUtil.logger.error("Could not load Hibernate properties.", e);
                 throw new RuntimeException("Error loading Hibernate properties.", e);
             }
         }
