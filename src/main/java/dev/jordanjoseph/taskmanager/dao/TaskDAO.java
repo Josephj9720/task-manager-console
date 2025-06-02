@@ -24,7 +24,7 @@ public class TaskDAO {
             tx = session.beginTransaction();
             session.persist(task);
             tx.commit();
-        } catch (Exception e ) {
+        } catch (Exception e) {
             if(tx != null) tx.rollback(); //reverts changes
             e.printStackTrace();
         }
