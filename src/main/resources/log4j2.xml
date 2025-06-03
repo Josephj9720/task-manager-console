@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<Configuration status="debug" name="task-manager-logger">
+<Configuration status="error" name="task-manager-logger">
 
     <Appenders>
         <Console name="CONSOLE" target="SYSTEM_OUT">
-            <PatternLayout pattern="%d{yyyy-mm-dd HH:mm:ss} [%t] %p %m%n"/>
+            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} [%t] %p %m%n"/>
         </Console>
 
         <!-- appender for logging to file (optional) -->
@@ -15,7 +15,7 @@
     </Appenders>
 
     <Loggers>
-        <Root level="INFO">
+        <Root level="warn">
             <AppenderRef ref="CONSOLE"/>
         </Root>
     </Loggers>
