@@ -1,4 +1,4 @@
-package dev.jordanjoseph;
+package dev.jordanjoseph.taskmanager;
 
 import dev.jordanjoseph.taskmanager.model.Task;
 import dev.jordanjoseph.taskmanager.service.TaskServiceImpl;
